@@ -1,4 +1,7 @@
-$("currentDay").text(moment().format("dddd, MMMMM Do YYYY"));
+$("#currentDay").text(moment().format("dddd, MMMM YYYY"));
+
+console.log(currentDay);
+
 
 function timeUpdate() {
     // current check
@@ -11,20 +14,20 @@ $(".time-block").each(function () {
 
 if (blockHour < currentHour) {
     $(this).addClass("past");
-    $(this).addClass("present");
+    $(this).removeClass("present");
     $(this).addClass("future");
 }
 
 else if (blockHour === currentHour) {
     $(this).removeClass("past");
-    $(this).removeClass("present");
+    $(this).addClass("present");
     $(this).removeClass("future");
 }
 
 else {
     $(this).removeClass("past");
     $(this).removeClass("present");
-    $(this).removeClass("future");
+    $(this).addClass("future");
 }
 
 })
