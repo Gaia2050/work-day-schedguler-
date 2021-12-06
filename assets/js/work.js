@@ -14,19 +14,19 @@ $(".time-block").each(function () {
 
 if (blockHour < currentHour) {
     $(this).addClass("past");
-    $(this).removeClass("present");
-    $(this).addClass("future");
+    // $(this).removeClass("present");
+    // $(this).addClass("future");
 }
 
 else if (blockHour === currentHour) {
-    $(this).removeClass("past");
+    // $(this).removeClass("past");
     $(this).addClass("present");
-    $(this).removeClass("future");
+    // $(this).removeClass("future");
 }
 
 else {
-    $(this).removeClass("past");
-    $(this).removeClass("present");
+    // $(this).removeClass("past");
+    // $(this).removeClass("present");
     $(this).addClass("future");
 }
 
@@ -36,10 +36,12 @@ else {
 
 timeUpdate();
 
-$(".saveBtn").on("click", function () {
-    var descr = $(this).siblings("description").val();
+$(".saveBtn").on("click", function (event) {
+    event.preventDefault();
+    var descr = $(this).siblings(".description").val();
     var hour = $(this).siblings(".hour").text();
-
+    console.log(descr);
+    console.log(hour);
     localStorage.setItem(hour, descr);
 })
 

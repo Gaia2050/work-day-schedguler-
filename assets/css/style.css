@@ -53,7 +53,7 @@ textarea{
 }
 
 .past {
-  background-color: rgb(4, 74, 139);
+  background-color: rgba(134, 190, 243, 0.445);
   color: white;
 }
 
@@ -63,7 +63,7 @@ textarea{
 }
 
 .future {
-  background-color: rgba(94, 186, 247, 0.829);
+  background-color: rgba(116, 131, 141, 0.493);
   color: white;
 }
 
